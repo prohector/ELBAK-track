@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_0df1b415fe60474d4b9c5e24c649173a {
+                #map_060d002c64be2ee381684b17762874a0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -69,30 +69,17 @@
         z-index: 9999;
         ">
         ELBAK TRACK<br>
-        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">2024-08-26 to 2024-08-26</span>
     </div>
     
-            <div class="folium-map" id="map_0df1b415fe60474d4b9c5e24c649173a" ></div>
+            <div class="folium-map" id="map_060d002c64be2ee381684b17762874a0" ></div>
         
-    
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;400&display=swap" rel="stylesheet">
-    
-    <div style="
-        position: fixed; 
-        top: 10px; left: 50%; transform: translateX(-50%);
-        width: 100%; text-align: center;
-        font-size: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; background: white; padding: 10px;
-        z-index: 9999;
-        ">
-        ELBAK TRACK<br>
-        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
-    </div>
 </body>
 <script>
     
     
-            var map_0df1b415fe60474d4b9c5e24c649173a = L.map(
-                "map_0df1b415fe60474d4b9c5e24c649173a",
+            var map_060d002c64be2ee381684b17762874a0 = L.map(
+                "map_060d002c64be2ee381684b17762874a0",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -106,17 +93,17 @@
 
         
     
-            var image_overlay_901d19a2b018b4f6a343e66e631af9ca = L.imageOverlay(
+            var image_overlay_94b93ee02a0819815f254cd67126384b = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_901d19a2b018b4f6a343e66e631af9ca.addTo(map_0df1b415fe60474d4b9c5e24c649173a);
+            image_overlay_94b93ee02a0819815f254cd67126384b.addTo(map_060d002c64be2ee381684b17762874a0);
         
     
-            map_0df1b415fe60474d4b9c5e24c649173a.fitBounds(
+            map_060d002c64be2ee381684b17762874a0.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
@@ -126,20 +113,20 @@
                 _getDisplayDateFormat: function(date){
                     var newdate = new moment(date);
                     console.log(newdate)
-                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                    return newdate.format("YYYY-MM-DD");
                 }
             });
-            map_0df1b415fe60474d4b9c5e24c649173a.timeDimension = L.timeDimension(
+            map_060d002c64be2ee381684b17762874a0.timeDimension = L.timeDimension(
                 {
                     period: "P1D",
                 }
             );
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
-                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
+                {"autoPlay": true, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
             );
-            map_0df1b415fe60474d4b9c5e24c649173a.addControl(this.timeDimensionControl);
+            map_060d002c64be2ee381684b17762874a0.addControl(this.timeDimensionControl);
 
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [1839.75, 1226.25]}, "properties": {"time": "2024-08-26T10:24:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03ba\u03c5\u03b2\u03bf\u03bc\u03b7\u03c7\u03b1\u03bd\u03b7\u03c2 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1523.75, 1655.0]}, "properties": {"time": "2024-08-26T10:01:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03b4\u03b9\u03b1\u03c1\u03c1\u03bf\u03ae \u03b1\u03c4\u03bc\u03bf\u03cd <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1678.0, 1138.25]}, "properties": {"time": "2024-08-26T08:36:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2 \u03bf\u03b4\u03b7\u03b3\u03cc\u03c2 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1772.5, 1227.75]}, "properties": {"time": "2024-08-26T08:34:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03b7 \u03b5\u03c1\u03c0\u03cd\u03c3\u03c4\u03c1\u03b9\u03b1 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1432.75, 1427.25]}, "properties": {"time": "2024-08-26T08:32:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c6\u03c1\u03b1\u03ba\u03b1\u03c1\u03b9\u03c3\u03bc\u03b5\u03bd\u03bf \u03b1\u03bd\u03b5\u03b2\u03b1\u03c4\u03bf\u03c1\u03b9\u03bf <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1393.25, 1425.25]}, "properties": {"time": "2024-08-26T02:10:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03a0\u03a1\u039f\u0395\u03a4\u039f\u0399\u039c\u0391\u03a3\u0399\u0391 \u0395\u03a1\u0393\u039f\u03a3\u03a4\u0391\u03a3\u0399\u039f\u03a5 \u0393\u0399\u0391 \u03a0\u0391\u03a1\u0391\u0393\u03a9\u0393\u0397<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1842.0, 1228.25]}, "properties": {"time": "2024-08-26T00:46:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039a\u0391\u0399 \u0391\u039d\u03a4\u0399\u039a\u0391\u03a4\u0391\u03a3\u03a4\u0391\u03a3\u0397 19 \u039c\u0391\u03a7\u0391\u0399\u03a1\u0399\u03a9\u039d \u0399\u03a3\u0399\u03a9\u039d \u039a\u0391\u0399 1 \u039c\u0391\u03a7\u0391\u0399\u03a1\u0399 \u03a6\u0395\u03a4\u0391\u03a3 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}]}, {
                     pointToLayer: function (feature, latLng) {
                         if (feature.properties.icon == 'marker') {
                             if(feature.properties.iconstyle){
@@ -173,78 +160,14 @@
                     }
                 })
 
-            var timestamped_geo_json_8a0cbd677a22970d7884814be05dd5d8 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_0edc2a05998ae71d99d1c42624810ffb = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
-                    addlastPoint: false,
+                    addlastPoint: true,
                     duration: undefined,
                 }
-            ).addTo(map_0df1b415fe60474d4b9c5e24c649173a);
-        
-    
-            image_overlay_901d19a2b018b4f6a343e66e631af9ca.addTo(map_0df1b415fe60474d4b9c5e24c649173a);
-        
-    
-            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
-                _getDisplayDateFormat: function(date){
-                    var newdate = new moment(date);
-                    console.log(newdate)
-                    return newdate.format("YYYY-MM-DD HH:mm:ss");
-                }
-            });
-            map_0df1b415fe60474d4b9c5e24c649173a.timeDimension = L.timeDimension(
-                {
-                    period: "P1D",
-                }
-            );
-            var timeDimensionControl = new L.Control.TimeDimensionCustom(
-                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
-            );
-            map_0df1b415fe60474d4b9c5e24c649173a.addControl(this.timeDimensionControl);
-
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
-                    pointToLayer: function (feature, latLng) {
-                        if (feature.properties.icon == 'marker') {
-                            if(feature.properties.iconstyle){
-                                return new L.Marker(latLng, {
-                                    icon: L.icon(feature.properties.iconstyle)});
-                            }
-                            //else
-                            return new L.Marker(latLng);
-                        }
-                        if (feature.properties.icon == 'circle') {
-                            if (feature.properties.iconstyle) {
-                                return new L.circleMarker(latLng, feature.properties.iconstyle)
-                                };
-                            //else
-                            return new L.circleMarker(latLng);
-                        }
-                        //else
-
-                        return new L.Marker(latLng);
-                    },
-                    style: function (feature) {
-                        return feature.properties.style;
-                    },
-                    onEachFeature: function(feature, layer) {
-                        if (feature.properties.popup) {
-                        layer.bindPopup(feature.properties.popup);
-                        }
-                        if (feature.properties.tooltip) {
-                        layer.bindTooltip(feature.properties.tooltip);
-                        }
-                    }
-                })
-
-            var timestamped_geo_json_eb885f9a2d64234f4335bdaebd139008 = L.timeDimension.layer.geoJson(
-                geoJsonLayer,
-                {
-                    updateTimeDimension: true,
-                    addlastPoint: false,
-                    duration: undefined,
-                }
-            ).addTo(map_0df1b415fe60474d4b9c5e24c649173a);
+            ).addTo(map_060d002c64be2ee381684b17762874a0);
         
 </script>
 </html>
