@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9f9b665f9ff014a39750f0bfd31baefb {
+                #map_71d6a44e2ff6a7614c87dab7b785de03 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -48,13 +48,6 @@
                     }
                 </style>
             
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
 </head>
 <body>
     
@@ -68,18 +61,17 @@
         font-size: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; background: white; padding: 10px;
         z-index: 9999;
         ">
-        ELBAK TRACK<br>
-        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
+        ELBAK TRACK
     </div>
     
-            <div class="folium-map" id="map_9f9b665f9ff014a39750f0bfd31baefb" ></div>
+            <div class="folium-map" id="map_71d6a44e2ff6a7614c87dab7b785de03" ></div>
         
 </body>
 <script>
     
     
-            var map_9f9b665f9ff014a39750f0bfd31baefb = L.map(
-                "map_9f9b665f9ff014a39750f0bfd31baefb",
+            var map_71d6a44e2ff6a7614c87dab7b785de03 = L.map(
+                "map_71d6a44e2ff6a7614c87dab7b785de03",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -93,81 +85,20 @@
 
         
     
-            var image_overlay_f75a1e0c7b652226c092f5470f33265c = L.imageOverlay(
+            var image_overlay_b909a0cee3078fcf9876e897f34822cc = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_f75a1e0c7b652226c092f5470f33265c.addTo(map_9f9b665f9ff014a39750f0bfd31baefb);
+            image_overlay_b909a0cee3078fcf9876e897f34822cc.addTo(map_71d6a44e2ff6a7614c87dab7b785de03);
         
     
-            map_9f9b665f9ff014a39750f0bfd31baefb.fitBounds(
+            map_71d6a44e2ff6a7614c87dab7b785de03.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
-        
-    
-            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
-                _getDisplayDateFormat: function(date){
-                    var newdate = new moment(date);
-                    console.log(newdate)
-                    return newdate.format("YYYY-MM-DD HH:mm:ss");
-                }
-            });
-            map_9f9b665f9ff014a39750f0bfd31baefb.timeDimension = L.timeDimension(
-                {
-                    period: "P1D",
-                }
-            );
-            var timeDimensionControl = new L.Control.TimeDimensionCustom(
-                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
-            );
-            map_9f9b665f9ff014a39750f0bfd31baefb.addControl(this.timeDimensionControl);
-
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
-                    pointToLayer: function (feature, latLng) {
-                        if (feature.properties.icon == 'marker') {
-                            if(feature.properties.iconstyle){
-                                return new L.Marker(latLng, {
-                                    icon: L.icon(feature.properties.iconstyle)});
-                            }
-                            //else
-                            return new L.Marker(latLng);
-                        }
-                        if (feature.properties.icon == 'circle') {
-                            if (feature.properties.iconstyle) {
-                                return new L.circleMarker(latLng, feature.properties.iconstyle)
-                                };
-                            //else
-                            return new L.circleMarker(latLng);
-                        }
-                        //else
-
-                        return new L.Marker(latLng);
-                    },
-                    style: function (feature) {
-                        return feature.properties.style;
-                    },
-                    onEachFeature: function(feature, layer) {
-                        if (feature.properties.popup) {
-                        layer.bindPopup(feature.properties.popup);
-                        }
-                        if (feature.properties.tooltip) {
-                        layer.bindTooltip(feature.properties.tooltip);
-                        }
-                    }
-                })
-
-            var timestamped_geo_json_f0498e76e8d3f9c09e1c8b230d244233 = L.timeDimension.layer.geoJson(
-                geoJsonLayer,
-                {
-                    updateTimeDimension: true,
-                    addlastPoint: false,
-                    duration: undefined,
-                }
-            ).addTo(map_9f9b665f9ff014a39750f0bfd31baefb);
         
 </script>
 </html>
