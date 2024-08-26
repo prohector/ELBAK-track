@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ebc3d2f1662f259b788381375c4b5665 {
+                #map_146e1628a7c0719d620cbaff96fb34a9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -69,17 +69,17 @@
         z-index: 9999;
         ">
         ELBAK TRACK<br>
-        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">2024-08-20 to 2024-08-20</span>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
     </div>
     
-            <div class="folium-map" id="map_ebc3d2f1662f259b788381375c4b5665" ></div>
+            <div class="folium-map" id="map_146e1628a7c0719d620cbaff96fb34a9" ></div>
         
 </body>
 <script>
     
     
-            var map_ebc3d2f1662f259b788381375c4b5665 = L.map(
-                "map_ebc3d2f1662f259b788381375c4b5665",
+            var map_146e1628a7c0719d620cbaff96fb34a9 = L.map(
+                "map_146e1628a7c0719d620cbaff96fb34a9",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -93,17 +93,17 @@
 
         
     
-            var image_overlay_32ba8c10eab7459f3c5714a688e86cfa = L.imageOverlay(
+            var image_overlay_97387cf6ca68314522d68307bb8a3721 = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_32ba8c10eab7459f3c5714a688e86cfa.addTo(map_ebc3d2f1662f259b788381375c4b5665);
+            image_overlay_97387cf6ca68314522d68307bb8a3721.addTo(map_146e1628a7c0719d620cbaff96fb34a9);
         
     
-            map_ebc3d2f1662f259b788381375c4b5665.fitBounds(
+            map_146e1628a7c0719d620cbaff96fb34a9.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
@@ -116,7 +116,7 @@
                     return newdate.format("YYYY-MM-DD HH:mm:ss");
                 }
             });
-            map_ebc3d2f1662f259b788381375c4b5665.timeDimension = L.timeDimension(
+            map_146e1628a7c0719d620cbaff96fb34a9.timeDimension = L.timeDimension(
                 {
                     period: "P1D",
                 }
@@ -124,9 +124,9 @@
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
                 {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
             );
-            map_ebc3d2f1662f259b788381375c4b5665.addControl(this.timeDimensionControl);
+            map_146e1628a7c0719d620cbaff96fb34a9.addControl(this.timeDimensionControl);
 
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [1525.25, 1629.0]}, "properties": {"time": "2024-08-20T14:28:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03b2\u03bb\u03b1\u03b2\u03b7<br><b>Level:</b> 3.0", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1217.0, 1557.25]}, "properties": {"time": "2024-08-20T14:13:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03c6\u03b5\u03c5\u03b3\u03b1\u03c4\u03bf\u03c2 \u03b9\u03bc\u03ac\u03bd\u03c4\u03b1\u03c2 \u03c0\u03bb\u03b1\u03ca\u03bd\u03cc\u03c2 <br><b>Level:</b> 3.0", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1524.75, 1626.5]}, "properties": {"time": "2024-08-20T14:08:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03b2\u03bb\u03ac\u03b2\u03b7 <br><b>Level:</b> 3.0", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1169.75, 653.75]}, "properties": {"time": "2024-08-20T13:19:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a6\u03a1\u0391\u039a\u0391\u03a1\u0399\u03a3\u039c\u0391<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1359.5, 1675.75]}, "properties": {"time": "2024-08-20T13:19:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0392\u0393\u0391\u039b\u039c\u0395\u039d\u039f\u03a3 \u0399\u039c\u0391\u039d\u03a4\u0391\u03a3<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1168.0, 1091.0]}, "properties": {"time": "2024-08-20T11:00:00.000001", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0394\u039f\u039a\u0399\u039c\u0397<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1171.5, 652.75]}, "properties": {"time": "2024-08-20T10:31:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a3\u03a4\u0391\u039c\u0391\u03a4\u0397\u039c\u0395\u039d\u039f\u03a3 \u039a\u039f\u03a7\u039b\u0399\u0391\u03a3 .\u03a3\u03a6\u0391\u039b\u039c\u0391 \u03a3\u03a4\u039f INVERTER<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1169.0, 1094.25]}, "properties": {"time": "2024-08-20T09:59:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0394\u039f\u039a\u0399\u039c\u0397 \u039a\u0391\u0399\u039d\u039f\u03a5\u03a1\u0393\u0399\u039f\u03a5 \u03a0\u03a1\u039f\u0393\u03a1\u0391\u039c\u039c\u0391\u03a4\u039f\u03a3<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1239.5, 1481.75]}, "properties": {"time": "2024-08-20T10:02:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u039a\u0391\u0398\u0391\u03a1\u0399\u03a3\u039c\u039f\u03a3 \u03a4\u03a3\u039f\u039a \u039a\u0395\u03a6\u0391\u039b\u03a9\u039d<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2301.25, 1968.0]}, "properties": {"time": "2024-08-20T09:34:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a0\u0395\u03a3\u039c\u0395\u039d\u0397 \u0391\u03a3\u03a6\u0391\u039b\u0395\u0399\u0391 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1839.75, 1227.75]}, "properties": {"time": "2024-08-20T09:59:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03bc\u03b1\u03c7\u03b1\u03b9\u03c1\u03b9\u03ce\u03bd <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1391.0, 1427.0]}, "properties": {"time": "2024-08-20T09:38:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u039f\u03a0\u03a4\u0399\u039a\u039f\u03a3 \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039a\u039f\u03a5\u03a4\u0399\u03a9\u039d <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.3, "color": "black", "weight": 2, "radius": 60}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1390.25, 1428.5]}, "properties": {"time": "2024-08-20T09:09:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u039f\u03a0\u03a4\u0399\u039a\u039f\u03a3 \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039a\u039f\u03a5\u03a4\u0399\u03a9\u039d <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.3, "color": "black", "weight": 2, "radius": 60}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1397.25, 1211.25]}, "properties": {"time": "2024-08-20T08:49:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a3\u03a4\u0391\u039c\u0391\u03a4\u0397\u039c\u0395\u039d\u039f \u039a\u039b\u0395\u0399\u03a3\u03a4\u0399\u039a\u039f<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1737.0, 844.75]}, "properties": {"time": "2024-08-20T06:59:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0388\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03c3\u03c4\u03ac\u03b8\u03bc\u03b7\u03c2 \u03b1\u03bd\u03b1\u03bb\u03ce\u03c3\u03b9\u03bc\u03c9\u03bd \u03b5\u03ba\u03c4\u03c5\u03c0\u03c9\u03c4\u03b9\u03ba\u03ce\u03bd \u03c3\u03c5\u03c3\u03ba\u03b5\u03c5\u03ce\u03bd<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1392.25, 1426.0]}, "properties": {"time": "2024-08-20T07:15:00.000001", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u03a0\u0391\u03a3\u03a4\u0395\u03a1\u0399\u03a9\u03a4\u03a9\u039d \u03a6\u03a5\u03a3\u0397\u03a4\u0397\u03a1\u03a9\u039d \u039a\u0391\u0399 \u03a0\u0391\u03a1\u0391\u0393\u03a9\u0393\u0397\u03a3 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.3, "color": "black", "weight": 2, "radius": 60}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1240.75, 1484.5]}, "properties": {"time": "2024-08-20T06:45:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0391\u039d\u039f\u0399\u039a\u03a4\u038c \u039a\u039f\u03a5\u03a4\u0399 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1243.25, 1482.5]}, "properties": {"time": "2024-08-20T06:20:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a3\u0397\u039c\u0391\u0394\u0399 \u03a3\u03a4\u039f \u039a\u039f\u03a5\u03a4\u0399 \u039c\u0395\u03a4\u0391 \u0391\u03a0\u039f \u039f\u03a0\u03a4\u0399\u039a\u039f \u0395\u039b\u0395\u0393\u03a7\u039f<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1391.25, 1426.75]}, "properties": {"time": "2024-08-20T06:11:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03c0\u03b1\u03c3\u03c4\u03b5\u03c1\u03b9\u03c9\u03c4\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c6\u03c5\u03c3\u03b7\u03c4\u03b7\u03c1\u03c9\u03bd <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.3, "color": "black", "weight": 2, "radius": 60}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1977.5, 1771.5]}, "properties": {"time": "2024-08-20T05:10:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a3\u03a0\u0391\u03a3\u039c\u0395\u039d\u039f \u03a3\u03a4\u0391\u0398\u0395\u03a1\u039f \u039c\u0391\u03a7\u0391\u0399\u03a1\u0399\u039f\u03a5<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1223.25, 1394.0]}, "properties": {"time": "2024-08-20T05:35:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a0\u039b\u0397\u03a1\u03a9\u03a3\u0397 \u039c\u0395 \u039b\u0391\u0394\u0399<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1391.0, 1428.5]}, "properties": {"time": "2024-08-20T05:06:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039f\u03a1\u0398\u0397\u03a3 \u039b\u0395\u0399\u03a4\u039f\u03a5\u03a1\u0393\u038a\u0391\u03a3 \u03a0\u0391\u03a3\u03a4\u0395\u03a1\u0399\u03a9\u03a4\u03a9\u039d \u039a\u0391\u0399 \u03a6\u03a5\u03a3\u0397\u03a4\u0397\u03a1\u03a9\u039d <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.3, "color": "black", "weight": 2, "radius": 60}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2115.0, 1802.0]}, "properties": {"time": "2024-08-20T03:59:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u03a4\u0395\u039d\u03a4\u03a9\u039c\u0391 \u039a\u0391\u0394\u0395\u039d\u0391 \u0395\u03a5\u0398\u03a5\u0393\u03a1\u0391\u039c\u039c\u0399\u03a3\u03a4\u03a9\u039d \u039a\u0391\u0399 \u0391\u039b\u039b\u0391\u0393\u0397 \u039b\u0391\u03a3\u03a4\u0399\u03a7\u0391 \u03a4\u03a3\u039f\u039a.<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1395.0, 1208.75]}, "properties": {"time": "2024-08-20T03:12:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0391\u039b\u039b\u0391\u0393\u0397 \u039a\u0391\u03a0\u0391\u039a\u0399\u0395\u03a1\u0391\u03a3<br><b>Level:</b> 3.0", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1844.5, 1228.75]}, "properties": {"time": "2024-08-20T02:04:59.999999", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039c\u0391\u03a7\u0391\u038a\u03a1\u0399\u03a9\u039d <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2202.75, 1721.5]}, "properties": {"time": "2024-08-20T00:11:00", "popup": "<b>Date:</b> 2024-08-20<br><b>Value:</b> \u039a\u0395\u039d\u0391 \u03a3\u03a4\u039f FEED CUP<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}]}, {
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
                     pointToLayer: function (feature, latLng) {
                         if (feature.properties.icon == 'marker') {
                             if(feature.properties.iconstyle){
@@ -160,14 +160,14 @@
                     }
                 })
 
-            var timestamped_geo_json_88c4829154ade21aee6d4fb431e855c3 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_a7882aa3b1f11e10c1134ded8789587c = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
                     addlastPoint: false,
                     duration: undefined,
                 }
-            ).addTo(map_ebc3d2f1662f259b788381375c4b5665);
+            ).addTo(map_146e1628a7c0719d620cbaff96fb34a9);
         
 </script>
 </html>
