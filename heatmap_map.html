@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b160b58e51e94b529f1ed172d2c389cf {
+                #map_7f81e107e3c08f0d4e7a505804441a61 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -62,17 +62,18 @@
         font-size: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; background: white; padding: 10px;
         z-index: 9999;
         ">
-        ELBAK TRACK
+        ELBAK TRACK<br>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
     </div>
     
-            <div class="folium-map" id="map_b160b58e51e94b529f1ed172d2c389cf" ></div>
+            <div class="folium-map" id="map_7f81e107e3c08f0d4e7a505804441a61" ></div>
         
 </body>
 <script>
     
     
-            var map_b160b58e51e94b529f1ed172d2c389cf = L.map(
-                "map_b160b58e51e94b529f1ed172d2c389cf",
+            var map_7f81e107e3c08f0d4e7a505804441a61 = L.map(
+                "map_7f81e107e3c08f0d4e7a505804441a61",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -86,29 +87,29 @@
 
         
     
-            var image_overlay_4008f0ca0bd58e01a1b46a5f01544baa = L.imageOverlay(
+            var image_overlay_1a1745f1b75c9f5add9cf2cb25460df8 = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_4008f0ca0bd58e01a1b46a5f01544baa.addTo(map_b160b58e51e94b529f1ed172d2c389cf);
+            image_overlay_1a1745f1b75c9f5add9cf2cb25460df8.addTo(map_7f81e107e3c08f0d4e7a505804441a61);
         
     
-            map_b160b58e51e94b529f1ed172d2c389cf.fitBounds(
+            map_7f81e107e3c08f0d4e7a505804441a61.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
         
     
-            var heat_map_bd6d50b28dbcdf11ad7f9aed47cfdcf0 = L.heatLayer(
+            var heat_map_4cf444ad9cfd7e12b25e901991f39cad = L.heatLayer(
                 [],
                 {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
             );
         
     
-            heat_map_bd6d50b28dbcdf11ad7f9aed47cfdcf0.addTo(map_b160b58e51e94b529f1ed172d2c389cf);
+            heat_map_4cf444ad9cfd7e12b25e901991f39cad.addTo(map_7f81e107e3c08f0d4e7a505804441a61);
         
 </script>
 </html>

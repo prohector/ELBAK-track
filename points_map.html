@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_71d6a44e2ff6a7614c87dab7b785de03 {
+                #map_0df1b415fe60474d4b9c5e24c649173a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -48,6 +48,13 @@
                     }
                 </style>
             
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
 </head>
 <body>
     
@@ -61,17 +68,31 @@
         font-size: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; background: white; padding: 10px;
         z-index: 9999;
         ">
-        ELBAK TRACK
+        ELBAK TRACK<br>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
     </div>
     
-            <div class="folium-map" id="map_71d6a44e2ff6a7614c87dab7b785de03" ></div>
+            <div class="folium-map" id="map_0df1b415fe60474d4b9c5e24c649173a" ></div>
         
+    
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;400&display=swap" rel="stylesheet">
+    
+    <div style="
+        position: fixed; 
+        top: 10px; left: 50%; transform: translateX(-50%);
+        width: 100%; text-align: center;
+        font-size: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; background: white; padding: 10px;
+        z-index: 9999;
+        ">
+        ELBAK TRACK<br>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
+    </div>
 </body>
 <script>
     
     
-            var map_71d6a44e2ff6a7614c87dab7b785de03 = L.map(
-                "map_71d6a44e2ff6a7614c87dab7b785de03",
+            var map_0df1b415fe60474d4b9c5e24c649173a = L.map(
+                "map_0df1b415fe60474d4b9c5e24c649173a",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -85,20 +106,145 @@
 
         
     
-            var image_overlay_b909a0cee3078fcf9876e897f34822cc = L.imageOverlay(
+            var image_overlay_901d19a2b018b4f6a343e66e631af9ca = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_b909a0cee3078fcf9876e897f34822cc.addTo(map_71d6a44e2ff6a7614c87dab7b785de03);
+            image_overlay_901d19a2b018b4f6a343e66e631af9ca.addTo(map_0df1b415fe60474d4b9c5e24c649173a);
         
     
-            map_71d6a44e2ff6a7614c87dab7b785de03.fitBounds(
+            map_0df1b415fe60474d4b9c5e24c649173a.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_0df1b415fe60474d4b9c5e24c649173a.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
+            );
+            map_0df1b415fe60474d4b9c5e24c649173a.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_8a0cbd677a22970d7884814be05dd5d8 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: false,
+                    duration: undefined,
+                }
+            ).addTo(map_0df1b415fe60474d4b9c5e24c649173a);
+        
+    
+            image_overlay_901d19a2b018b4f6a343e66e631af9ca.addTo(map_0df1b415fe60474d4b9c5e24c649173a);
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
+                }
+            });
+            map_0df1b415fe60474d4b9c5e24c649173a.timeDimension = L.timeDimension(
+                {
+                    period: "P1D",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
+            );
+            map_0df1b415fe60474d4b9c5e24c649173a.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_eb885f9a2d64234f4335bdaebd139008 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: false,
+                    duration: undefined,
+                }
+            ).addTo(map_0df1b415fe60474d4b9c5e24c649173a);
         
 </script>
 </html>
