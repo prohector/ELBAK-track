@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8ec91a73b212b002d7bf491916181736 {
+                #map_7ed954986b7806b8c1ac14acf4cc1e10 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -69,17 +69,17 @@
         z-index: 9999;
         ">
         ELBAK TRACK<br>
-        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">2024-08-26 to 2024-08-26</span>
+        <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">2024-08-27 00:27:00 to 2024-08-27 07:09:00</span>
     </div>
     
-            <div class="folium-map" id="map_8ec91a73b212b002d7bf491916181736" ></div>
+            <div class="folium-map" id="map_7ed954986b7806b8c1ac14acf4cc1e10" ></div>
         
 </body>
 <script>
     
     
-            var map_8ec91a73b212b002d7bf491916181736 = L.map(
-                "map_8ec91a73b212b002d7bf491916181736",
+            var map_7ed954986b7806b8c1ac14acf4cc1e10 = L.map(
+                "map_7ed954986b7806b8c1ac14acf4cc1e10",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -93,17 +93,17 @@
 
         
     
-            var image_overlay_81f300f011e24d59e5ae39e482fbc59e = L.imageOverlay(
+            var image_overlay_82b4f12cd1b2da7a6732f24c62b6009f = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_81f300f011e24d59e5ae39e482fbc59e.addTo(map_8ec91a73b212b002d7bf491916181736);
+            image_overlay_82b4f12cd1b2da7a6732f24c62b6009f.addTo(map_7ed954986b7806b8c1ac14acf4cc1e10);
         
     
-            map_8ec91a73b212b002d7bf491916181736.fitBounds(
+            map_7ed954986b7806b8c1ac14acf4cc1e10.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
@@ -113,20 +113,20 @@
                 _getDisplayDateFormat: function(date){
                     var newdate = new moment(date);
                     console.log(newdate)
-                    return newdate.format("YYYY-MM-DD");
+                    return newdate.format("YYYY-MM-DD HH:mm:ss");
                 }
             });
-            map_8ec91a73b212b002d7bf491916181736.timeDimension = L.timeDimension(
+            map_7ed954986b7806b8c1ac14acf4cc1e10.timeDimension = L.timeDimension(
                 {
-                    period: "P1D",
+                    period: "PT1M",
                 }
             );
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
-                {"autoPlay": true, "loopButton": true, "maxSpeed": 1, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
+                {"autoPlay": true, "loopButton": false, "maxSpeed": 50, "minSpeed": 0.1, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
             );
-            map_8ec91a73b212b002d7bf491916181736.addControl(this.timeDimensionControl);
+            map_7ed954986b7806b8c1ac14acf4cc1e10.addControl(this.timeDimensionControl);
 
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [1839.75, 1226.25]}, "properties": {"time": "2024-08-26T10:24:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03ba\u03c5\u03b2\u03bf\u03bc\u03b7\u03c7\u03b1\u03bd\u03b7\u03c2 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1523.75, 1655.0]}, "properties": {"time": "2024-08-26T10:01:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03b4\u03b9\u03b1\u03c1\u03c1\u03bf\u03ae \u03b1\u03c4\u03bc\u03bf\u03cd <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1678.0, 1138.25]}, "properties": {"time": "2024-08-26T08:36:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2 \u03bf\u03b4\u03b7\u03b3\u03cc\u03c2 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1772.5, 1227.75]}, "properties": {"time": "2024-08-26T08:34:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03b7 \u03b5\u03c1\u03c0\u03cd\u03c3\u03c4\u03c1\u03b9\u03b1 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1432.75, 1427.25]}, "properties": {"time": "2024-08-26T08:32:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03c6\u03c1\u03b1\u03ba\u03b1\u03c1\u03b9\u03c3\u03bc\u03b5\u03bd\u03bf \u03b1\u03bd\u03b5\u03b2\u03b1\u03c4\u03bf\u03c1\u03b9\u03bf <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1393.25, 1425.25]}, "properties": {"time": "2024-08-26T02:10:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u03a0\u03a1\u039f\u0395\u03a4\u039f\u0399\u039c\u0391\u03a3\u0399\u0391 \u0395\u03a1\u0393\u039f\u03a3\u03a4\u0391\u03a3\u0399\u039f\u03a5 \u0393\u0399\u0391 \u03a0\u0391\u03a1\u0391\u0393\u03a9\u0393\u0397<br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1842.0, 1228.25]}, "properties": {"time": "2024-08-26T00:46:00", "popup": "<b>Date:</b> 2024-08-26<br><b>Value:</b> \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039a\u0391\u0399 \u0391\u039d\u03a4\u0399\u039a\u0391\u03a4\u0391\u03a3\u03a4\u0391\u03a3\u0397 19 \u039c\u0391\u03a7\u0391\u0399\u03a1\u0399\u03a9\u039d \u0399\u03a3\u0399\u03a9\u039d \u039a\u0391\u0399 1 \u039c\u0391\u03a7\u0391\u0399\u03a1\u0399 \u03a6\u0395\u03a4\u0391\u03a3 <br><b>Level:</b> 4.0", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}, "style": {"font-size": "16px"}}}]}, {
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [2001.0, 1768.25]}, "properties": {"time": "2024-08-27T07:09:00", "popup": "<b>Date:</b> 2024-08-27 07:09:00<br><b>Value:</b> \u03a3\u03a0\u0391\u03a3\u039c\u0388\u039d\u039f \u0395\u039b\u0391\u03a4\u0389\u03a1\u0399\u039f \u0394\u0391\u0393\u039a\u0386\u039d\u0391\u03a3 \u0391\u039b\u039b\u0391\u0393\u0389 <br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2090.25, 1722.25]}, "properties": {"time": "2024-08-27T06:55:00", "popup": "<b>Date:</b> 2024-08-27 06:55:00<br><b>Value:</b> \u039e\u0395\u03a1\u03a5\u0398\u039c\u0399\u03a3\u03a4\u0397\u039a\u0395 \u039f \u03a4\u03a1\u039f\u03a6\u039f\u0394\u038c\u03a4\u0397\u03a3 \u03a1\u038e\u0398\u039c\u0399\u03a3\u0397 <br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1391.0, 1428.75]}, "properties": {"time": "2024-08-27T06:35:00", "popup": "<b>Date:</b> 2024-08-27 06:35:00<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03c0\u03b1\u03c1\u03b1\u03b3\u03c9\u03b3\u03ae\u03c2 \u03ba\u03b1\u03b9 \u03c1\u03c5\u03b8\u03bc\u03af\u03c3\u03b5\u03b9\u03c2 \u03b7\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bb\u03cc\u03b3\u03bf\u03c2 \u03b2\u03ac\u03c1\u03b4\u03b9\u03b1\u03c2 <br><b>Level:</b> 4", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1388.25, 1429.5]}, "properties": {"time": "2024-08-27T06:01:00", "popup": "<b>Date:</b> 2024-08-27 06:01:00<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03c0\u03b1\u03c3\u03c4\u03b5\u03c1\u03b9\u03c9\u03c4\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c6\u03c5\u03c3\u03b7\u03c4\u03b7\u03c1\u03c9\u03bd  <br><b>Level:</b> 4", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2300.75, 1969.5]}, "properties": {"time": "2024-08-27T03:07:00", "popup": "<b>Date:</b> 2024-08-27 03:07:00<br><b>Value:</b> \u03b2\u03bb\u03b1\u03b2\u03b7<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1522.5, 1624.5]}, "properties": {"time": "2024-08-27T03:28:00", "popup": "<b>Date:</b> 2024-08-27 03:28:00<br><b>Value:</b> \u03c6\u03c1\u03b1\u03ba\u03b1\u03c1\u03b9\u03c3\u03bc\u03b5\u03bd\u03b7 \u03ba\u03b1\u03b4\u03b5\u03bd\u03b1 \u03b2\u03b1\u03b6\u03c9\u03bd \u03ba\u03b1\u03b9 \u03c7\u03b1\u03bb\u03b1\u03c3\u03bc\u03b5\u03bd\u03bf\u03c2 \u03c1\u03c5\u03b8\u03bc\u03b9\u03c3\u03c4\u03b7\u03c2 \u03c0\u03b9\u03b5\u03c3\u03b7\u03c2.<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1975.75, 1767.0]}, "properties": {"time": "2024-08-27T03:13:00", "popup": "<b>Date:</b> 2024-08-27 03:13:00<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03bf \u03c0\u03bf\u03b4\u03b1\u03c1\u03ac\u03ba\u03b9 \u03ba\u03b1\u03b9 \u03b2\u03b3\u03b1\u03bb\u03bc\u03ad\u03bd\u03b7 \u03ba\u03b1\u03b4\u03b5\u03bd\u03b1<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2098.0, 1768.5]}, "properties": {"time": "2024-08-27T03:12:00", "popup": "<b>Date:</b> 2024-08-27 03:12:00<br><b>Value:</b> \u03ba\u03bf\u03bb\u03bb\u03b7\u03bc\u03ad\u03bd\u03bf \u03b4\u03ac\u03c7\u03c4\u03c5\u03bb\u03bf \u03c4\u03c3\u03bf\u03ba<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1389.25, 1426.5]}, "properties": {"time": "2024-08-27T02:57:00", "popup": "<b>Date:</b> 2024-08-27 02:57:00<br><b>Value:</b> \u039f\u03a0\u03a4\u0399\u039a\u039f\u03a3 \u0395\u039b\u0395\u0393\u03a7\u039f\u03a3 \u039a\u039f\u03a5\u03a4\u0399\u03a9\u039d<br><b>Level:</b> 4", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1841.5, 1224.25]}, "properties": {"time": "2024-08-27T02:01:00", "popup": "<b>Date:</b> 2024-08-27 02:01:00<br><b>Value:</b> \u03ad\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2 \u03bc\u03b1\u03c7\u03b1\u03b9\u03c1\u03b9\u03ce\u03bd <br><b>Level:</b> 4", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2228.25, 1802.5]}, "properties": {"time": "2024-08-27T01:31:00", "popup": "<b>Date:</b> 2024-08-27 01:31:00<br><b>Value:</b> \u03c3\u03c0\u03b1\u03c3\u03bc\u03ad\u03bd\u03bf \u03bc\u03c0\u03c1\u03ac\u03c4\u03c3\u03bf \u03b4\u03b1\u03b3\u03ba\u03b1\u03bd\u03b1\u03c2<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [2203.25, 1805.0]}, "properties": {"time": "2024-08-27T01:30:00", "popup": "<b>Date:</b> 2024-08-27 01:30:00<br><b>Value:</b> \u03c1\u03cd\u03b8\u03bc\u03b9\u03c3\u03b7 \u03c4\u03c1\u03bf\u03c6\u03bf\u03b4\u03bf\u03c4\u03b7<br><b>Level:</b> 3", "icon": "circle", "iconstyle": {"fillColor": "yellow", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [1669.5, 1299.25]}, "properties": {"time": "2024-08-27T00:27:00", "popup": "<b>Date:</b> 2024-08-27 00:27:00<br><b>Value:</b> \u0388\u039b\u0395\u0393\u03a7\u039f\u03a3 \u03a6\u0395\u03a4\u039f\u039c\u0397\u03a7\u0391\u039d\u0397\u03a3 <br><b>Level:</b> 4", "icon": "circle", "iconstyle": {"fillColor": "green", "fillOpacity": 0.6, "color": "black", "weight": 3, "radius": 20}}}]}, {
                     pointToLayer: function (feature, latLng) {
                         if (feature.properties.icon == 'marker') {
                             if(feature.properties.iconstyle){
@@ -160,14 +160,14 @@
                     }
                 })
 
-            var timestamped_geo_json_d60d664ade5c351a25ed71aa1a90c047 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_5c13adc5216decb16cf80506d7cba752 = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
-                    addlastPoint: true,
+                    addlastPoint: false,
                     duration: undefined,
                 }
-            ).addTo(map_8ec91a73b212b002d7bf491916181736);
+            ).addTo(map_7ed954986b7806b8c1ac14acf4cc1e10);
         
 </script>
 </html>
