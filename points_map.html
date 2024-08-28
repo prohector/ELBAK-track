@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_b81179545bb8b726c178afd8bcfcfc43 {
+                #map_0467f817ef7930b1aec4ad845f75e590 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -72,14 +72,14 @@
         <span style="font-size: 16px; font-weight: normal; font-family: 'Roboto', sans-serif;">No valid date range</span>
     </div>
     
-            <div class="folium-map" id="map_b81179545bb8b726c178afd8bcfcfc43" ></div>
+            <div class="folium-map" id="map_0467f817ef7930b1aec4ad845f75e590" ></div>
         
 </body>
 <script>
     
     
-            var map_b81179545bb8b726c178afd8bcfcfc43 = L.map(
-                "map_b81179545bb8b726c178afd8bcfcfc43",
+            var map_0467f817ef7930b1aec4ad845f75e590 = L.map(
+                "map_0467f817ef7930b1aec4ad845f75e590",
                 {
                     center: [1241.625, 1755.25],
                     crs: L.CRS.Simple,
@@ -93,17 +93,17 @@
 
         
     
-            var image_overlay_637b1631b4e49352f574a430773c7cab = L.imageOverlay(
+            var image_overlay_9286754cce71b5ccb64ca6a9bd58f104 = L.imageOverlay(
                 "https://github.com/prohector/ELBAK-track/blob/main/map%20super.jpg?raw=true",
                 [[0, 0], [2483.25, 3510.5]],
                 {"interactive": true}
             );
         
     
-            image_overlay_637b1631b4e49352f574a430773c7cab.addTo(map_b81179545bb8b726c178afd8bcfcfc43);
+            image_overlay_9286754cce71b5ccb64ca6a9bd58f104.addTo(map_0467f817ef7930b1aec4ad845f75e590);
         
     
-            map_b81179545bb8b726c178afd8bcfcfc43.fitBounds(
+            map_0467f817ef7930b1aec4ad845f75e590.fitBounds(
                 [[0, 0], [2483.25, 3510.5]],
                 {}
             );
@@ -116,7 +116,7 @@
                     return newdate.format("YYYY-MM-DD HH:mm:ss");
                 }
             });
-            map_b81179545bb8b726c178afd8bcfcfc43.timeDimension = L.timeDimension(
+            map_0467f817ef7930b1aec4ad845f75e590.timeDimension = L.timeDimension(
                 {
                     period: "PT1M",
                 }
@@ -124,7 +124,7 @@
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
                 {"autoPlay": true, "loopButton": false, "maxSpeed": 100, "minSpeed": 10, "playerOptions": {"loop": false, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "speedSlider": true, "timeSliderDragUpdate": false}
             );
-            map_b81179545bb8b726c178afd8bcfcfc43.addControl(this.timeDimensionControl);
+            map_0467f817ef7930b1aec4ad845f75e590.addControl(this.timeDimensionControl);
 
             var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
                     pointToLayer: function (feature, latLng) {
@@ -160,14 +160,14 @@
                     }
                 })
 
-            var timestamped_geo_json_c7dc114aab0d978ce2df1157ed592ae3 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_0cdfc69242cedf27b3f2d2804ae2b605 = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
                     addlastPoint: false,
                     duration: undefined,
                 }
-            ).addTo(map_b81179545bb8b726c178afd8bcfcfc43);
+            ).addTo(map_0467f817ef7930b1aec4ad845f75e590);
         
 </script>
 </html>
